@@ -1,10 +1,6 @@
-- 👋 Hi, I’m @Sabhs™🌀
-- 👀 I’m interested in web development
-- 🌱 I’m currently learning javascript frameworks
-- 💞️ I’m looking to collaborate on web development projects 
-- 📫 How to reach me ,whatsapp me on :0768964804 or email: sabilahbethuel812@gmail.com
+## Hi, I'm Bethuel 👋
 
-<!---
-sabhsTM/sabhsTM is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+- 🔭 Moving from web development into data science and machine learning
+- 🌱 Currently learning: scikit-learn, SQL, and building end-to-end projects
+- 📓 My ML notebooks: [ML_restored](https://github.com/sabhsTM/ML_restored)
+- 💼 Background: telecommunications engineering, JavaScript web apps, Python
