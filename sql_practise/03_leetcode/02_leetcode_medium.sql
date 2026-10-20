@@ -473,6 +473,39 @@ left join latest l
  on l.product_id = p.product_id
 and l.rn = 1;
 
+-- 626. Exchange Seats
+
+select id,
+       case
+           when id % 2 = 1 then ifnull(lead(student) over (order by id), student)
+           else lag(student) over (order by id)
+       end as student
+from Seat;
+
+-- Approach 2 using case
+select
+    case
+        when id % 2 = 1 and id = (select max(id) from Seat) then id
+        when id % 2 = 1 then id + 1
+        else id - 1
+    end as id,
+    student
+from Seat
+order by id;
+
+-- 1204. Last Person to Fit in the Bus
+with running as (
+    select person_name, turn,
+           sum(weight) over (order by turn) as total_weight
+    from Queue
+)
+select person_name
+from running
+where total_weight <= 1000
+order by turn desc
+limit 1;
+
+
 
 
 

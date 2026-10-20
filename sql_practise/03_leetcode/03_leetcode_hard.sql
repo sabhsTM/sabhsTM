@@ -64,3 +64,22 @@ where (
     where emp2.departmentId = emp1.departmentId and
     emp2.salary >emp1.salary
 ) < 3;
+
+
+-- 601.Human Traffic of Stadium
+
+with filtered as (
+    select id, visit_date, people,
+           id - row_number() over (order by id) as grp
+    from Stadium
+    where people >= 100
+),
+sized as (
+    select *,
+           count(*) over (partition by grp) as cnt
+    from filtered
+)
+select id, visit_date, people
+from sized
+where cnt >= 3
+order by visit_date;
